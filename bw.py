@@ -4,8 +4,8 @@ import pyaudio
 p = pyaudio.PyAudio()
 stream = p.open(format=pyaudio.paFloat32, channels=2, rate=44100, output=1)
 while True:
-    factor_l = float(75) * (math.pi * 2) / 44100
-    factor_r = float(85) * (math.pi * 2) / 44100
+    factor_l = 75 * (math.pi * 2) / 44100
+    factor_r = 85 * (math.pi * 2) / 44100
     chunk_l = numpy.sin(numpy.arange(44100) * factor_l)
     chunk_r = numpy.sin(numpy.arange(44100) * factor_r)
     chunk = []
